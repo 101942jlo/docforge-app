@@ -26,6 +26,9 @@ For the Presentation / Demo I will be giving in January the application will be 
     <img src="https://skillicons.dev/icons?i=raspberrypi,docker,ubuntu,linux" />
   </a>
 </p>
+<p align="center">
+  <img src="/images/DocForge_Network.png" alt="Architecture network schematic" width="500" height="300">
+</p>
 
 ## What I will be learning with this project?
 
