@@ -1,11 +1,11 @@
 
 # DocForge App 
 
-The AEC (architecture, engineering, construction) industry is well known for being in continuous evolution/changes during the whole construction process. Working with the last updated file it can be a real challenge. Although there are differente Common Data Environment (CDE) in the market for exchanging and centralizing documents most of the time the exchange of information (plans) happens via email, SharedPoint and some CDE well known within the industry.
+The AEC (Architecture, Engineering, and Construction) industry is well known for its continuous evolution and frequent changes throughout the construction process. Keeping track of the latest updated files can be a real challenge. Although there are various Common Data Environments (CDEs) available in the market for exchanging and centralizing documents, most of the time, information (such as plans) is still exchanged via email, SharePoint, or certain CDEs widely recognized within the industry.
 
-Despite the construction industry has changed/improved over the years, workers on site they still keep/prefer working with plans on paper and this lead most of the time to not working with the last version of the plans/documents. Making building sites PaperLess is not an option. But if there is one thing that everybody carry/wear on site besides helmet and a package of cigarttes is an smartphone.
+Despite the advancements in the construction industry over the years, workers on-site often prefer working with printed plans, which frequently leads to using outdated versions of plans and documents. While making construction sites entirely paperless may not be feasible, one thing that everyone carries on-site—besides a helmet and, occasionally, a pack of cigarettes—is a smartphone.
 
-And this is how DocForge was born. DocForge is a webapplication where Architects, Engineers and Stakeholders can upload Plans/Files (normally PDFs) and be traceable. The idea is every document/plan (pdf) uploaded will get a automaticlly a QR-code visible in one of the corner of the PDF. The construction worker with his smartphone will be able to scan the QR-code and check if he/she is working with the last version of the documents and eventually download the last version.
+This is where DocForge comes in. DocForge is a web application that enables architects, engineers, and stakeholders to upload plans and files (typically PDFs) in a way that makes them easily traceable. Every document or plan uploaded to the platform is automatically assigned a QR code, visible in one of the corners of the PDF. Construction workers can scan the QR code using their smartphones to verify whether they are working with the latest version of the document and, if necessary, download the updated version.
 
 ## Programming languages and technologies
 
@@ -32,6 +32,6 @@ For the Presentation / Demo I will be giving in January the application will be 
 I will be learning the following topics and technologies:
 - Networking: Vpn, Linux Servers, DNS/DNSS
 - Databases: MongoDB
-- Managing sessions, Authentication: JWT (json web token)
+- Managing sessions, Authentication: JWT (JSON web token)
 - Containerization: Docker
 - QR-Code technology: Did you know that a QR code can store
