@@ -27,7 +27,7 @@ For the Presentation / Demo I will be giving in January the application will be 
   </a>
 </p>
 <p align="center">
-  <img src="/images/DocForge_Network.png" alt="Architecture network schematic" width="500" height="300">
+  <img src="/images/DocForge_Network.png" alt="Architecture network schematic" width="500">
 </p>
 
 ## What I will be learning with this project?
