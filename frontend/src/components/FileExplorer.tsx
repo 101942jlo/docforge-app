@@ -1,19 +1,17 @@
 import { useEffect, useState } from "react";
-import { Files } from "../types/files"
 import { FileHolder } from "./FileHolder"
 import { NewFileHolder } from "./NewFileHolder"
 import { IoIosArrowDown } from "react-icons/io";
 import { useAuth } from "./AuthProvider";
 
 interface FileExplorerProps {
-    filesInFolder: Files[]
     setShowFolders: (ww: boolean)=>void
     setShowFiles: (ww: boolean)=>void
     folderName: string
     setIsModalFileOpen: (ww:boolean)=>void
 }
 
-export const FileExplorer = ({filesInFolder, setShowFolders, setShowFiles, folderName, setIsModalFileOpen}:FileExplorerProps) => {
+export const FileExplorer = ({ setShowFolders, setShowFiles, folderName, setIsModalFileOpen}:FileExplorerProps) => {
     const [del, setDel] = useState(false)
     // const [isFile, setIsFile] = useState(false)
     const { folderFiles } = useAuth()
@@ -30,7 +28,7 @@ export const FileExplorer = ({filesInFolder, setShowFolders, setShowFiles, folde
                 // setIsFile(true)                
             }
         }
-    }, [filesInFolder])
+    }, [folderFiles])
 
 
 
@@ -47,7 +45,7 @@ export const FileExplorer = ({filesInFolder, setShowFolders, setShowFiles, folde
             </div>
             <div className="grid grid-cols-4 gap-4">
                 <NewFileHolder setIsModalOpen={setIsModalFileOpen}/>
-                {filesInFolder && folderFiles?.map(file =>{return(<FileHolder key={file.id} fileId={file.id} fileName={file.filename} />)})}
+                {folderFiles && folderFiles?.map(file =>{return(<FileHolder key={file.id} fileId={file.id} fileName={file.filename} />)})}
             </div>
         </div>
     )

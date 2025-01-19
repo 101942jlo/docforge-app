@@ -1,16 +1,17 @@
-# Use official Node.js image to build the app
-FROM node:latest AS builder
+FROM node:20-alpine
 
-# Set working directory
 WORKDIR /app
 
-# Install dependencies
-COPY package.json package-lock.json ./
+COPY package.json .
+
 RUN npm install
 
-# Copy project files
-COPY . .
-# Expose port 80 for nginx
-EXPOSE 5173
+RUN npm i -g serve
 
-CMD ["npm", "run", "dev"]
+COPY . .
+
+RUN npm run build
+
+EXPOSE 8080
+
+CMD [ "serve", "-s", "dist" ]
