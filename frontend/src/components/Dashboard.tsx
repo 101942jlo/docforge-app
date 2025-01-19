@@ -7,7 +7,7 @@ import { Modal } from './Modal';
 import { FileExplorer } from './FileExplorer';
 
 function Dashboard() {
-  const { handleCreateFolder, userFolders, folderFiles, handleUploadFile } = useAuth()
+  const { handleCreateFolder, userFolders, handleUploadFile } = useAuth()
 
   const [folderName, setFolderName] = useState("");
   const [selectedFolder, setSelectedFolder] = useState("");
@@ -16,7 +16,7 @@ function Dashboard() {
   const [isModalFileOpen, setIsModalFileOpen] = useState(false);
   const [showFolders, setShowFolders] = useState(true)
   const [showFiles, setShowFiles] = useState(false)
-  const [folderFiles2, setFolderFiles2] = useState([])
+  // const [folderFiles2, setFolderFiles2] = useState([])
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   // const [filesIn] = useState(null)
 
@@ -47,7 +47,7 @@ function Dashboard() {
     <div className='h-screen w-full bg-slate-100'>
       <Navbar />
       <div className='bg-slate-100 flex justify-center mt-5'>
-        { showFiles && <FileExplorer setIsModalFileOpen={setIsModalFileOpen} folderName={selectedFolder} filesInFolder={folderFiles2} setShowFolders={setShowFolders} setShowFiles={setShowFiles}/> }
+        { showFiles && <FileExplorer setIsModalFileOpen={setIsModalFileOpen} folderName={selectedFolder} setShowFolders={setShowFolders} setShowFiles={setShowFiles}/> }
         <div className='grid grid-cols-4 gap-4'>
           { showFolders &&<NewProjectCard setIsModalOpen={setIsModalOpen} />}
           { showFolders && userFolders?.map((folder, _) =>  <ProjectCard setSelectedFolderId={setSelectedFolderId} setSelectedFolder={setSelectedFolder} setShowFiles={setShowFiles} setShowFolders={setShowFolders} folderId={folder.id} key={folder.id} folderName={folder.name}/>)}

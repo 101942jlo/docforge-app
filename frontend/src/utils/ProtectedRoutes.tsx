@@ -1,4 +1,4 @@
-import { PropsWithChildren, useEffect } from "react"
+import { PropsWithChildren } from "react"
 import { Navigate, Outlet } from "react-router-dom"
 import { User } from "../types/user";
 import { useAuth } from "../components/AuthProvider";
@@ -7,7 +7,7 @@ type ProtectedRoutesProps = PropsWithChildren & {
     allowRoles: User['role'][];
 }
 
-const ProtectedRoutes = ({allowRoles, children}: ProtectedRoutesProps) => {
+const ProtectedRoutes = ({allowRoles}: ProtectedRoutesProps) => {
     const { currentUser, loading } = useAuth()
 
     if (loading) {

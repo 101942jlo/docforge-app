@@ -1,18 +1,3 @@
-# name: docforge-app
-
-# services:
-#   backend: 
-#     build: 
-#       context: ./backend
-#       dockerfile: Dockerfile
-#     restart: unless-stopped
-#     env_file: ./backend/.env
-#     ports:
-#       - 5000:5000
-#   frontend:
-
-
-name: docforge-app2
 
 services:
   frontend:
@@ -20,11 +5,9 @@ services:
       context: ./frontend
       dockerfile: Dockerfile
     ports:
-      - "5173:5173"
-    volumes:
-      - ./frontend:/app
+      - "8080:8080"
     working_dir: /app
-    command: ["npm", "run", "dev"]
+    command: ["npm", "run", "preview"]
     depends_on:
       - backend
 
