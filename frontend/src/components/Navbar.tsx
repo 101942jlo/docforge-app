@@ -1,23 +1,27 @@
 import { TiWeatherCloudy } from "react-icons/ti"
-
+import { UserProfile } from "./UserProfile"
+import { useNavigate } from "react-router-dom"
 
 const Navbar = () => {
+    // const {authToken, handleLogin, handleLogout} = useAuth()
+    const navigate = useNavigate()
     return (
-        <nav className="bg-white text-slate-900 sticky top-0 z-50 w-full shadow-sm">
+        <nav className="bg-white text-slate-900 sticky top-0 z-10 w-full shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo Section */}
                     <div className="flex items-center">
                         <TiWeatherCloudy className="text-4xl mr-4" />
-                        <a href="#" className="text-xl font-bold">DocForge</a>
+                        <p onClick={()=> navigate('/dashboard')} className="text-xl font-bold cursor-pointer">DocForge</p>
                     </div>
 
                     {/* Links Section */}
-                    <div className="hidden md:flex space-x-4">
-                        <a href="#" className="hover:text-gray-300">Home</a>
+                    <div className="hidden md:flex space-x-4 justify-center items-center">
+                        {/* <a href="#" className="hover:text-gray-300">Home</a>
                         <a href="#" className="hover:text-gray-300">About</a>
                         <a href="#" className="hover:text-gray-300">Services</a>
-                        <a href="#" className="hover:text-gray-300">Contact</a>
+                        <a href="#" className="hover:text-gray-300">Contact</a> */}
+                        <UserProfile />
                     </div>
 
                     {/* Mobile Menu Button */}
